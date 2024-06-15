@@ -1,0 +1,309 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y:hidden;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+/* Navigation Bar */
+
+
+.nav-bar{
+    background-color: white;
+    height:58px;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.logo img{
+    width: 50px;
+    padding-top: 7px;
+    padding-right: 10px;
+    padding-left: 0px;
+}
+
+.logo{
+    padding-right: 0px;
+    padding-left: 15px;
+}
+
+.nav-menu{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-right:20px;
+
+}
+
+.nav-menu div{
+    padding-right: 26px;
+}
+
+.nav-menu a{
+    color: maroon;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.home{
+    padding-left: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 5px;
+}
+
+.home a{
+    color: black;
+}
+
+
+.hamburger{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Container */
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 500px;
+}
+
+.container-content{
+    /* background-color: red; */
+    position: relative;
+}
+
+.search-content{
+    
+}
+
+
+button{
+    padding: 28px 28px 20px 28px;
+    border-radius: 15px;
+}
+
+input{
+    margin-left: 200px;
+    margin-top: 50px;
+    padding: 15px;
+    width: 380px;
+    border-radius: 15px;
+    border: none;
+}
+
+h1{
+    color: goldenrod;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+
+
+
+
+/* Contact-on-Home */
+
+.contact-content{
+    /* background-color: blue; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home Page Responsiveness */
+
+@media screen and (max-width:360px) {
+
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:52px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 40px;
+        padding-top: 7px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 359px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: 1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    .socials{
+        background-color: white;
+    }
+
+    .socials p{
+        color: red;
+    }
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+
+
+    /* Container */
+
+   .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    }
+
+    .container-content{
+        background-color: red;
+        display: none;
+    }
+
+    .search-content{
+        display: block;
+     }
+
+    .search-btn{
+        display: none;
+    }
+
+     input{  
+
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+}
