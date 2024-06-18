@@ -2,15 +2,27 @@
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    overflow-y:hidden;
 }
 
 body{
     padding: 0;
     margin: 0;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     overflow-x: hidden;
-    background-color: black;
+    background-color:black;
+}
+
+
+.trans-one{
+    position: absolute;
+    top: 140px;
+    left: 70px;
+    opacity: 0.3;
+
+}
+
+.trans-one img{
+    width: 80px;
 }
 
 
@@ -28,10 +40,11 @@ body{
     height:58px;
     display: flex;
     justify-content:space-evenly;
+    margin-top: 3px;
 }
 
 .logo img{
-    width: 50px;
+    width: 47px;
     padding-top: 7px;
     padding-right: 10px;
     padding-left: 0px;
@@ -60,6 +73,12 @@ body{
     font-size: 17px;
 }
 
+.nav-menu a:hover{
+    font-size: 18px;
+    transition: 0.5s;
+    color: goldenrod;
+}
+
 .home{
     padding-left: 32px;
     padding-top: 10px;
@@ -73,6 +92,10 @@ body{
 
 
 .hamburger{
+    display: none;
+}
+
+.cancel img{
     display: none;
 }
 
@@ -94,7 +117,6 @@ body{
 }
 
 .container-content{
-    /* background-color: red; */
     position: relative;
 }
 
@@ -104,24 +126,79 @@ body{
 
 
 button{
-    padding: 28px 28px 20px 28px;
-    border-radius: 15px;
+    position: absolute;
+    top: 40px;
+    right: 220px;
+    padding: 1px 10px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border:none;
 }
+
+button:hover{
+    opacity: 0.8;
+
+}
+
+button img{
+    width: 30px;
+}
+
 
 input{
-    margin-left: 200px;
-    margin-top: 50px;
-    padding: 15px;
-    width: 380px;
-    border-radius: 15px;
+    margin-left: 180px;
+    margin-top: 40px;
+    padding: 10px 15px;
+    width: 390px;
     border: none;
+    outline: none;
+    border-radius: 5px;
 }
 
+
+
 h1{
-    color: goldenrod;
+    /* color: white; */
     padding-left: 30px;
     padding-top: 20px;
 }
+
+
+
+.line{
+    background-color: goldenrod;
+    height: 5px;
+    position: absolute;
+    width: 520px;
+    top: 390px;
+}
+
+
+.line-two{
+    background-color: goldenrod;
+    height: 5px;
+    position: absolute;
+    top: 390px;
+    right: 0px;
+    width: 220px;
+    color: goldenrod;
+
+}
+
+
+.line p{
+    color: goldenrod;
+}
+
+
+.decoration img{
+    width: 140px;
+    position: absolute;
+    top: 330px;
+    right: 200px;
+}
+
 
 
 
@@ -130,9 +207,40 @@ h1{
 /* Contact-on-Home */
 
 .contact-content{
-    /* background-color: blue; */
+    background-color:goldenrod;
+    border-radius: 50px;    
+    /* margin-top: 45px;
+    margin-right: 0px; */
+    height: 400px;
+    width: 350px;
+    position: absolute;
+    top: 130px;
+    right: 100px;
 }
 
+
+.contact-content h1{
+    /* color: black; */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.line-three{
+    position: absolute;
+    background-color: goldenrod;
+    height: 5px;
+    position: absolute;
+    top: 445px;
+    right: 0px;
+    width: 80px;
+    color: goldenrod;
+    
+}
+
+
+
+.white-container{
+    background-color: white;
+}
 
 
 
@@ -154,8 +262,13 @@ h1{
 
 /* Home Page Responsiveness */
 
-@media screen and (max-width:360px) {
 
+
+
+
+/* iPad Pro */
+
+@media screen and (max-width:1024px){
 
     *{
         padding: 0;
@@ -176,16 +289,16 @@ h1{
     
     .nav-bar{
         background-color: white;
-        height:52px;
+        height:75px;
         display: flex;
         justify-content:space-evenly;
     }
     
     .logo img{
-        width: 40px;
-        padding-top: 7px;
+        width: 50px;
+        padding-top: 10px;
         padding-left:20px;
-        padding-right: 200px;
+        padding-right: 500px;
     
     }
     
@@ -200,10 +313,10 @@ h1{
         justify-content: space-between;
         padding-right:0px;
         background-color: black;
-        width: 359px;
+        width: 1020px;
         position: absolute;
         left: 0px;
-        top: 50px;
+        top: 75px;
         height: 600px;
         z-index: 1;
         
@@ -214,6 +327,7 @@ h1{
         margin-bottom: 10px;
         padding-left: 25px;
         padding-top: 10px;
+        z-index: 1;
         
     }
     
@@ -245,7 +359,7 @@ h1{
     .search-btn{
         display: block;
         margin-right: 70px;
-        z-index: 1;
+        z-index: -1;
         width: 80px;
     }
 
@@ -254,13 +368,1283 @@ h1{
         padding: 13px;
     }
 
-    .socials{
-        background-color: white;
+    
+
+    .hamburger{
+        display: block;
+
     }
 
-    .socials p{
-        color: red;
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 0px;
+        padding-top: 14px;
+        margin-left: 0px;
     }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 19px;
+        position: absolute;
+        left: 840px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 786px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:912px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:75px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 500px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 910px;
+        position: absolute;
+        left: 0px;
+        top: 90px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 30px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 0px;
+        padding-top: 14px;
+        margin-left: 0px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 790px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 670px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* iPad Air */
+
+@media screen and (max-width:820px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:75px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 500px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 820px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 0px;
+        padding-top: 14px;
+        margin-left: 0px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 740px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 576px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* iPad Mini */
+
+
+@media screen and (max-width:768px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:75px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 500px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 767px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 0px;
+        padding-top: 14px;
+        margin-left: 0px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 665px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 529px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:540px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 539px;
+        position: absolute;
+        left: 0px;
+        top: 56px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 25px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 10px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 435px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        /* background-color: red; */
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 300px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+    }
+    
+    
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:430px){
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 429px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
     
 
     .hamburger{
@@ -275,30 +1659,69 @@ h1{
         padding-top: 14px;
     }
 
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 365px;
+    }
 
 
     /* Container */
 
    .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;   
+    display: block;
     }
 
     .container-content{
-        background-color: red;
-        display: none;
+        /* background-color: red; */
+        display: block;
+        height: 100px;
     }
 
     .search-content{
         display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
      }
 
     .search-btn{
-        display: none;
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
     }
 
-     input{  
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
 
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 189px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
     }
 
 
@@ -306,4 +1729,3943 @@ h1{
         display: none;
     }
 
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+    }
+    
+    
+    
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:425px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 423px;
+        position: absolute;
+        left: 0px;
+        top: 55px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 345px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 182px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:420px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 419px;
+        position: absolute;
+        left: 0px;
+        top: 55px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 340px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 177px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:414px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 413px;
+        position: absolute;
+        left: 0px;
+        top: 55px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 30px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 330px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 172px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:410px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 410px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 335px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 167px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:405px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 402px;
+        position: absolute;
+        left: 0px;
+        top: 60px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 330px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 162px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:400px){
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 398px;
+        position: absolute;
+        left: 0px;
+        top: 55px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 320px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 157px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        display: none;
+        padding-top: 20px;
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        display: none;
+        top: 390px;
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:395px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 369px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 305px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 152px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:390px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 389px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 320px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 147px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+        display: none;
+
+    }
+    
+    
+    
+    .line{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+        display: none;
+    }
+    
+    
+    .line-two{
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+        display: none;
+
+    
+    }
+    
+    
+    .line p{
+        color: goldenrod;
+        display: none;
+
+    }
+    
+    
+    .decoration img{
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+        display: none;
+
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:385px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 369px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 305px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 143px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        display: none;
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+    
+    
+    
+    .line{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+    }
+    
+    
+    .line-two{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+    
+    }
+    
+    
+    .line p{
+        display: none;
+        color: goldenrod;
+    }
+    
+    
+    .decoration img{
+        display: none;
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:380px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 379px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 305px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 139px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+
+    h1{
+        display: none;
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+    
+    
+    
+    .line{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+    }
+    
+    
+    .line-two{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+    
+    }
+    
+    
+    .line p{
+        display: none;
+        color: goldenrod;
+    }
+    
+    
+    .decoration img{
+        display: none;
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:375px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 375px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 305px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 139px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        display: none;
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+    
+    
+    
+    .line{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+    }
+    
+    
+    .line-two{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+    
+    }
+    
+    
+    .line p{
+        display: none;
+        color: goldenrod;
+    }
+    
+    
+    .decoration img{
+        display: none;
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:370px){
+    
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 369px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 305px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        /* background-color: red; */
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 129px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        display: none;
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+    
+    
+    
+    .line{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+    }
+    
+    
+    .line-two{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+    
+    }
+    
+    
+    .line p{
+        display: none;
+        color: goldenrod;
+    }
+    
+    
+    .decoration img{
+        display: none;
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:365px){
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 369px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 40px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 305px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        /* background-color: red; */
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 28px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 129px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        display: none;
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+    
+    
+    
+    .line{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+    }
+    
+    
+    .line-two{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+    
+    }
+    
+    
+    .line p{
+        display: none;
+        color: goldenrod;
+    }
+    
+    
+    .decoration img{
+        display: none;
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:360px) {
+
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:55px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 2px;
+        padding-left:20px;
+        padding-right: 200px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 359px;
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 50px;
+        padding-top: 14px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 9px;
+        position: absolute;
+        left: 305px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 25px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        z-index: 1;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 120px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+        z-index: -1;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        display: none;
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+    
+    
+    
+    .line{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+    }
+    
+    
+    .line-two{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+    
+    }
+    
+    
+    .line p{
+        display: none;
+        color: goldenrod;
+    }
+    
+    
+    .decoration img{
+        display: none;
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:344px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y:hidden;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-color: red
+        position: relative;
+        z-index: -1;
+    }
+    
+    .nav-bar{
+        background-color: white;
+        height:75px;
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .logo img{
+        width: 50px;
+        padding-top: 10px;
+        padding-left:20px;
+        padding-right: 500px;
+    
+    }
+    
+    .logo{
+        padding-right: 90px;
+        padding-left: 0px;
+    }
+    
+    .nav-menu{
+        display: none;
+        align-items:center;
+        justify-content: space-between;
+        padding-right:0px;
+        background-color: black;
+        width: 344px;
+        position: absolute;
+        left: 0px;
+        top: 65px;
+        height: 600px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu div{
+        padding-right: 0px;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        padding-top: 10px;
+        z-index: 1;
+        
+    }
+    
+    .nav-menu a{
+        text-decoration: none;
+        font-size: 20px;
+        height: 500px;
+        z-index: 1;
+        color: white;
+        
+
+    }
+    
+    .home{
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        margin-right: 5px;
+        height: 15px;
+
+    }
+    
+    .home a{
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+
+    .search-btn{
+        display: block;
+        margin-right: 70px;
+        z-index: -1;
+        width: 80px;
+    }
+
+    input{
+        width: 60px;
+        padding: 13px;
+    }
+
+    
+
+    .hamburger{
+        display: block;
+
+    }
+
+
+    .hamburger img{
+        width: 40px;
+        padding-right: 0px;
+        padding-top: 20px;
+        margin-left: 0px;
+        margin-right: 120px;
+    }
+
+    .cancel{
+        display: block;
+    }
+
+    .cancel img{
+        display: none;
+        width: 30px;
+        padding-top: 15px;
+        position: absolute;
+        left: 280px;
+    }
+
+
+    /* Container */
+
+   .container{
+    display: block;
+    }
+
+    .container-content{
+        display: block;
+        height: 100px;
+    }
+
+    .search-content{
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+      
+     }
+
+    .search-btn{
+        display: block;
+        margin-top: 0;
+        position: absolute;
+        right: 0px;
+        left: 240px;
+        top: 20px;
+        width: 40px;
+        padding: 0px 0px;
+        height: 35.5px;
+        border-radius: 5px;
+        border: none;
+        
+    }
+
+    button{
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+     input{ 
+        padding-right: 20px;
+        margin-left: 80px;
+        margin-top: 20px;
+        width: 136px;
+        padding-bottom: 7px;
+        border-radius: 5px;
+    }
+
+    input:focus{
+        border: none;
+        outline: none;
+    }
+
+
+    .contact-content{
+        display: none;
+    }
+
+    h1{
+        /* color: white; */
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+    
+    
+    
+    .line{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        width: 520px;
+        top: 390px;
+    }
+    
+    
+    .line-two{
+        display: none;
+        background-color: goldenrod;
+        height: 5px;
+        position: absolute;
+        top: 390px;
+        right: 0px;
+        width: 220px;
+        color: goldenrod;
+    
+    }
+    
+    
+    .line p{
+        display: none;
+        color: goldenrod;
+    }
+    
+    
+    .decoration img{
+        display: none;
+        width: 140px;
+        position: absolute;
+        top: 330px;
+        right: 200px;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
